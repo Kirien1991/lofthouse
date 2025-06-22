@@ -1,4 +1,5 @@
-//base
-@use "./base/reset";
-@use "./base/vars";
-@use "./base/base";
+@import "./base/reset";
+@import "./base/vars";
+@import "./base/base";
+
+@import "./blocks/header";
