@@ -1,0 +1,11 @@
+.apartments {
+  &__title {
+    margin-bottom: 88px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 30px;
+  }
+}
