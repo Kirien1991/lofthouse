@@ -13,10 +13,14 @@ a {
     color: $accent;
     transition: color 0.2s ease-in;
   }
+}
 
-  .wrapper {
-    margin: 0 auto;
-    padding: 0 15px;
-    width: 1140px;
-  }
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 1140px;
+}
+
+.text-right {
+  text-align: right;
 }
