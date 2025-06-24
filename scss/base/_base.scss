@@ -16,6 +16,8 @@ a {
 }
 
 .container {
+  position: relative;
+  z-index: 2;
   margin: 0 auto;
   padding: 0 15px;
   max-width: 1140px;
@@ -51,4 +53,42 @@ a {
   font-family: $font-accent;
   font-weight: 700;
   color: $accent;
+}
+
+.number {
+  &--right:before {
+    left: 100%;
+  }
+
+  &--left:before {
+    right: 100%;
+  }
+  &:before {
+    content: attr(data-icon);
+    position: absolute;
+    line-height: 100%;
+    z-index: -1;
+    font-family: $font-accent;
+    color: $white;
+    font-size: 400px;
+    font-weight: 700;
+    opacity: 0.02;
+  }
+
+  &--two:before {
+    top: -80px;
+  }
+  &--three:before {
+    margin-right: -240px;
+  }
+  &--for:before {
+    top: 0;
+    bottom: 0;
+    margin: auto auto auto -10px;
+    height: 400px;
+  }
+  &--five:before {
+    top: -13px;
+    margin-right: -130px;
+  }
 }

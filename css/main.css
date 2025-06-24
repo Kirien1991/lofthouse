@@ -127,6 +127,8 @@ a:hover {
 }
 
 .container {
+  position: relative;
+  z-index: 2;
   margin: 0 auto;
   padding: 0 15px;
   max-width: 1140px;
@@ -159,6 +161,40 @@ a:hover {
   font-family: "Playfair Display", serif;
   font-weight: 700;
   color: #d4c17f;
+}
+
+.number--right:before {
+  left: 100%;
+}
+.number--left:before {
+  right: 100%;
+}
+.number:before {
+  content: attr(data-icon);
+  position: absolute;
+  line-height: 100%;
+  z-index: -1;
+  font-family: "Playfair Display", serif;
+  color: #ffffff;
+  font-size: 400px;
+  font-weight: 700;
+  opacity: 0.02;
+}
+.number--two:before {
+  top: -80px;
+}
+.number--three:before {
+  margin-right: -240px;
+}
+.number--for:before {
+  top: 0;
+  bottom: 0;
+  margin: auto auto auto -10px;
+  height: 400px;
+}
+.number--five:before {
+  top: -13px;
+  margin-right: -130px;
 }
 
 .header {
@@ -348,7 +384,7 @@ a:hover {
 }
 .video__link {
   position: relative;
-  display: block;
+  display: inline-block;
   text-align: center;
 }
 .video__link:hover {
