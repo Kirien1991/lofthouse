@@ -1,0 +1,17 @@
+.footer-nav {
+  &__list {
+    display: grid;
+    gap: 15px;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    font-family: $font-main;
+    color: $white;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 5%;
+  }
+}
