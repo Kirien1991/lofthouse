@@ -252,7 +252,10 @@ a:hover {
 }
 .apartments__cards {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /*Dekstop mobil
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  */
   gap: 30px;
 }
 
@@ -276,4 +279,66 @@ a:hover {
   color: #ffffff;
   font-size: 24px;
   font-weight: 400;
+}
+
+.cta {
+  padding: 180px 0;
+  background-image: url("./../image/cta/cta-bg.jpg");
+}
+.cta__title {
+  margin-bottom: 17px;
+}
+.cta__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.cta__text {
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
+  line-height: 1.5;
+}
+.cta__text p + p {
+  margin-top: 1em;
+}
+.cta__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px 30px;
+}
+
+.form__input {
+  height: 50px;
+  padding: 12px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 14px;
+  transition: background-color 0.2s ease-in;
+}
+.form__input::placeholder {
+  color: #bebebe;
+}
+.form__input:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.form__privacy {
+  font-family: "Raleway", sans-serif;
+  font-size: 13px;
+  color: #e7e7e7;
+  text-align: center;
+  line-height: 1.8;
+}
+.form__btn {
+  height: 50px;
+  padding: 12px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #d4c17f;
+  font-weight: 700;
+  text-align: center;
+  transition: background-color 0.2s ease-in;
+}
+.form__btn:hover {
+  background-color: rgb(220.55, 197.7276470588, 118.45);
 }
