@@ -1,0 +1,27 @@
+.video {
+  text-align: center;
+
+  &__link {
+    position: relative;
+    display: block;
+    text-align: center;
+
+    &:hover {
+      transition: filter 0.3s ease;
+      filter: brightness(1.2);
+    }
+  }
+
+  &__link:hover &__icon {
+    transform: translate(-50%, -50%) scale(1.2);
+    filter: saturate(1.5);
+  }
+
+  &__icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transition: all 0.2s ease-in;
+    transform: translate(-50%, -50%);
+  }
+}

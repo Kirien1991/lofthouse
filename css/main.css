@@ -342,3 +342,50 @@ a:hover {
 .form__btn:hover {
   background-color: rgb(220.55, 197.7276470588, 118.45);
 }
+
+.video {
+  text-align: center;
+}
+.video__link {
+  position: relative;
+  display: block;
+  text-align: center;
+}
+.video__link:hover {
+  transition: filter 0.3s ease;
+  filter: brightness(1.2);
+}
+.video__link:hover .video__icon {
+  transform: translate(-50%, -50%) scale(1.2);
+  filter: saturate(1.5);
+}
+.video__icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transition: all 0.2s ease-in;
+  transform: translate(-50%, -50%);
+}
+
+.section-map {
+  padding: 180px 0;
+}
+.section-map__title {
+  margin-bottom: 88px;
+}
+.map {
+  height: 358px;
+  background: #626262;
+}
+
+.feedback {
+  padding-bottom: 180px;
+}
+.feedback__title {
+  margin-bottom: 38px;
+}
+.feedback__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+}
