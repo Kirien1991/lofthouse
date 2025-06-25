@@ -75,6 +75,7 @@ a {
     opacity: 0.02;
   }
 
+  /*Roman numerals*/
   &--two:before {
     top: -80px;
   }
@@ -91,4 +92,22 @@ a {
     top: -13px;
     margin-right: -130px;
   }
+}
+
+.footer-nav {
+  &__list {
+    display: grid;
+    gap: 15px;
+    font-family: $font-main;
+    color: $white;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 5%;
+  }
+}
+
+/*footer link*/
+.link-adress {
+  color: $accent;
+  font-weight: 700;
 }

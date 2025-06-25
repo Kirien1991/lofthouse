@@ -11,10 +11,12 @@
 
       position: absolute;
       left: 0;
-      top: 0;
+      top: 50%;
       width: 21px;
       height: 21px;
       background-repeat: no-repeat;
+      background-position: center;
+      transform: translate(0, -50%);
     }
   }
 
@@ -24,5 +26,14 @@
 
   &--tel::before {
     background-image: url("./../image/header/phone.svg");
+  }
+
+  @include mediaTablet {
+    font-size: 14px;
+
+    &--map,
+    &--tel {
+      padding-left: 26px;
+    }
   }
 }
