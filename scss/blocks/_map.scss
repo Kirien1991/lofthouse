@@ -1,4 +1,19 @@
 .map {
   height: 358px;
   background: #626262;
+  position: relative;
+
+  &::after {
+    content: "V";
+    z-index: -2;
+    position: absolute;
+    top: -195px;
+    left: -135px;
+    font-size: 400px;
+    font-family: $font-accent;
+    font-weight: 700;
+    color: $white;
+    opacity: 0.02;
+    overflow: hidden;
+  }
 }
