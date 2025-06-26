@@ -25,7 +25,7 @@
 
     &--mobile {
       position: fixed;
-      z-index: 9;
+      z-index: 99;
       background-color: $dark;
       top: 0;
       left: 0;
@@ -34,8 +34,30 @@
 
       display: flex;
       flex-direction: column;
+      justify-content: flex-start;
       align-items: center;
       row-gap: 60px;
+
+      padding-top: 40px;
+      padding-bottom: 40px;
+
+      .header__nav {
+        display: grid;
+        gap: 30px;
+      }
+
+      .nav__list {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 30px;
+      }
+
+      .header__nav-btn {
+        position: fixed;
+        z-index: 11;
+        right: 20px;
+        top: 50px;
+      }
     }
   }
 
