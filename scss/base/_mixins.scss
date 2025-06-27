@@ -22,7 +22,7 @@
 }
 
 @mixin mediaBorder {
-  @media screen and (max-width: $small) {
+  @media screen and (max-width: $border) {
     @content;
   }
 }
