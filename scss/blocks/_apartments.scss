@@ -4,6 +4,7 @@
   &::after {
     content: "III";
     position: absolute;
+    z-index: 1;
     top: -60px;
     left: 170px;
     font-size: 400px;
@@ -12,17 +13,26 @@
     color: $white;
     opacity: 0.02;
     overflow: hidden;
+
+    @include mediaTablet {
+      content: "";
+    }
   }
   &__title {
     margin-bottom: 88px;
+
+    @include mediaTablet {
+      margin-bottom: 44px;
+    }
   }
 
   &__cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /*Dekstop mobil
-    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-    */
     gap: 30px;
+
+    @include mediaTablet {
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    }
   }
 }

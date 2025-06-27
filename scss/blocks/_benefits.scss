@@ -1,10 +1,12 @@
 .benefits {
   padding: 120px 0;
   position: relative;
+  overflow: hidden;
 
   &::after {
     content: "II";
     position: absolute;
+    z-index: 1;
     top: -40px;
     right: 225px;
     font-size: 400px;
@@ -13,10 +15,25 @@
     color: $white;
     opacity: 0.02;
     overflow: hidden;
+
+    @include mediaTablet {
+      font-size: 150px;
+      top: 110px;
+    }
+
+    @include mediaSmall {
+      content: "";
+    }
   }
   &__row {
     display: flex;
     column-gap: 70px;
+
+    @include mediaTablet {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 40px 30px;
+    }
   }
 
   &__item {
@@ -25,6 +42,12 @@
 
   &__item-img {
     margin-bottom: 53px;
+
+    @include mediaTablet {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 20px;
+    }
   }
 
   &__item-text {
@@ -32,5 +55,9 @@
     line-height: 1.35;
     font-family: $font-secondary;
     font-weight: 300;
+
+    @include mediaTablet {
+      font-size: 16px;
+    }
   }
 }

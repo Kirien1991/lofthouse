@@ -1,11 +1,12 @@
 .map {
+  overflow: hidden;
   height: 358px;
   background: #626262;
   position: relative;
 
   &::after {
     content: "V";
-    z-index: -2;
+    z-index: -1;
     position: absolute;
     top: -195px;
     left: -135px;
@@ -15,5 +16,9 @@
     color: $white;
     opacity: 0.02;
     overflow: hidden;
+
+    @include mediaTablet {
+      content: "";
+    }
   }
 }

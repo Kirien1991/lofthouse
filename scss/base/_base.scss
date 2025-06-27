@@ -51,10 +51,15 @@ a {
   font-family: $font-accent;
   font-weight: 700;
   color: $accent;
+
+  @include mediaTablet {
+    font-size: 28px;
+  }
 }
 
 .footer-nav {
   &__list {
+    position: relative;
     display: grid;
     gap: 15px;
     font-family: $font-main;
@@ -62,6 +67,22 @@ a {
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 5%;
+    padding-bottom: 5px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: $accent;
+      transition: width 0.3s ease;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
   }
 }
 

@@ -23,6 +23,12 @@
     color: $muted;
     text-align: center;
     line-height: 1.8;
+
+    &--bottom {
+      @include mediaTablet {
+        grid-row: 4/5;
+      }
+    }
   }
 
   &__btn {

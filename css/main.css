@@ -160,8 +160,14 @@ a:hover {
   font-weight: 700;
   color: #d4c17f;
 }
+@media screen and (max-width: 959px) {
+  .title-2 {
+    font-size: 28px;
+  }
+}
 
 .footer-nav__list {
+  position: relative;
   display: grid;
   gap: 15px;
   font-family: "Raleway", sans-serif;
@@ -169,6 +175,20 @@ a:hover {
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 5%;
+  padding-bottom: 5px;
+}
+.footer-nav__list::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #d4c17f;
+  transition: width 0.3s ease;
+}
+.footer-nav__list:hover::after {
+  width: 100%;
 }
 
 /*footer link*/
@@ -190,13 +210,13 @@ a:hover {
   padding-top: 30px;
   padding-bottom: 74px;
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 959px) {
   .header {
     min-height: unset;
     row-gap: 50px;
   }
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 959px) {
   .header__nav {
     display: none;
   }
@@ -240,7 +260,7 @@ a:hover {
 .header__nav-btn {
   display: none;
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 959px) {
   .header__nav-btn {
     display: block;
   }
@@ -254,7 +274,7 @@ a:hover {
   color: #d4c17f;
   font-weight: 700;
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 959px) {
   .header__title {
     font-size: 32px;
     padding-bottom: 100px;
@@ -271,7 +291,7 @@ a:hover {
   grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 959px) {
   .header__footer {
     display: flex;
     flex-direction: column;
@@ -373,7 +393,7 @@ a:hover {
 .info--tel::before {
   background-image: url("./../image/header/phone.svg");
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 959px) {
   .info {
     font-size: 14px;
   }
@@ -385,10 +405,12 @@ a:hover {
 .benefits {
   padding: 120px 0;
   position: relative;
+  overflow: hidden;
 }
 .benefits::after {
   content: "II";
   position: absolute;
+  z-index: 1;
   top: -40px;
   right: 225px;
   font-size: 400px;
@@ -398,9 +420,27 @@ a:hover {
   opacity: 0.02;
   overflow: hidden;
 }
+@media screen and (max-width: 959px) {
+  .benefits::after {
+    font-size: 150px;
+    top: 110px;
+  }
+}
+@media screen and (max-width: 630px) {
+  .benefits::after {
+    content: "";
+  }
+}
 .benefits__row {
   display: flex;
   column-gap: 70px;
+}
+@media screen and (max-width: 959px) {
+  .benefits__row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 40px 30px;
+  }
 }
 .benefits__item {
   text-align: center;
@@ -408,11 +448,23 @@ a:hover {
 .benefits__item-img {
   margin-bottom: 53px;
 }
+@media screen and (max-width: 959px) {
+  .benefits__item-img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+  }
+}
 .benefits__item-text {
   font-size: 20px;
   line-height: 1.35;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
+}
+@media screen and (max-width: 959px) {
+  .benefits__item-text {
+    font-size: 16px;
+  }
 }
 
 .apartments {
@@ -421,6 +473,7 @@ a:hover {
 .apartments::after {
   content: "III";
   position: absolute;
+  z-index: 1;
   top: -60px;
   left: 170px;
   font-size: 400px;
@@ -430,16 +483,28 @@ a:hover {
   opacity: 0.02;
   overflow: hidden;
 }
+@media screen and (max-width: 959px) {
+  .apartments::after {
+    content: "";
+  }
+}
 .apartments__title {
   margin-bottom: 88px;
+}
+@media screen and (max-width: 959px) {
+  .apartments__title {
+    margin-bottom: 44px;
+  }
 }
 .apartments__cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /*Dekstop mobil
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  */
   gap: 30px;
+}
+@media screen and (max-width: 959px) {
+  .apartments__cards {
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  }
 }
 
 .card {
@@ -463,10 +528,22 @@ a:hover {
   font-size: 24px;
   font-weight: 400;
 }
+@media screen and (max-width: 959px) {
+  .card__title {
+    font-size: 20px;
+    left: 30px;
+    bottom: 35px;
+  }
+}
 
 .cta {
   padding: 180px 0;
   background-image: url("./../image/cta/cta-bg.jpg");
+}
+@media screen and (max-width: 959px) {
+  .cta {
+    padding: 60px 0;
+  }
 }
 .cta__title {
   margin-bottom: 17px;
@@ -476,6 +553,11 @@ a:hover {
   grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
+@media screen and (max-width: 959px) {
+  .cta__wrapper {
+    grid-template-columns: 1fr;
+  }
+}
 .cta__text {
   font-family: "Raleway", sans-serif;
   color: #ffffff;
@@ -484,10 +566,20 @@ a:hover {
 .cta__text p + p {
   margin-top: 1em;
 }
+@media screen and (max-width: 959px) {
+  .cta__text {
+    font-size: 14px;
+  }
+}
 .cta__form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 35px 30px;
+}
+@media screen and (max-width: 959px) {
+  .cta__form {
+    grid-template-columns: 1fr;
+  }
 }
 
 .form__input {
@@ -512,6 +604,11 @@ a:hover {
   text-align: center;
   line-height: 1.8;
 }
+@media screen and (max-width: 959px) {
+  .form__privacy--bottom {
+    grid-row: 4/5;
+  }
+}
 .form__btn {
   height: 50px;
   padding: 12px;
@@ -527,12 +624,14 @@ a:hover {
 }
 
 .video {
+  overflow: hidden;
   text-align: center;
   position: relative;
 }
 .video::after {
   content: "IV";
   position: absolute;
+  z-index: 1;
   top: 15px;
   right: 190px;
   font-size: 400px;
@@ -541,6 +640,11 @@ a:hover {
   color: #ffffff;
   opacity: 0.02;
   overflow: hidden;
+}
+@media screen and (max-width: 959px) {
+  .video::after {
+    content: "";
+  }
 }
 .video__link {
   position: relative;
@@ -562,6 +666,12 @@ a:hover {
   transition: all 0.2s ease-in;
   transform: translate(-50%, -50%);
 }
+@media screen and (max-width: 959px) {
+  .video__icon {
+    width: 80px;
+    height: 80px;
+  }
+}
 
 .section-map {
   padding: 180px 0;
@@ -569,14 +679,26 @@ a:hover {
 .section-map__title {
   margin-bottom: 88px;
 }
+@media screen and (max-width: 959px) {
+  .section-map__map {
+    padding: 90px 0;
+  }
+}
+@media screen and (max-width: 959px) {
+  .section-map__title {
+    margin-bottom: 44px;
+  }
+}
+
 .map {
+  overflow: hidden;
   height: 358px;
   background: #626262;
   position: relative;
 }
 .map::after {
   content: "V";
-  z-index: -2;
+  z-index: -1;
   position: absolute;
   top: -195px;
   left: -135px;
@@ -587,17 +709,37 @@ a:hover {
   opacity: 0.02;
   overflow: hidden;
 }
+@media screen and (max-width: 959px) {
+  .map::after {
+    content: "";
+  }
+}
 
 .feedback {
   padding-bottom: 180px;
 }
+@media screen and (max-width: 959px) {
+  .feedback {
+    padding-bottom: 90px;
+  }
+}
 .feedback__title {
   margin-bottom: 38px;
+}
+@media screen and (max-width: 959px) {
+  .feedback__title {
+    margin-bottom: 19px;
+  }
 }
 .feedback__form {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 30px;
+}
+@media screen and (max-width: 959px) {
+  .feedback__form {
+    grid-template-columns: 1fr;
+  }
 }
 
 .footer {
@@ -606,10 +748,22 @@ a:hover {
   background-color: #2d343c;
   letter-spacing: 0.05rem;
 }
+@media screen and (max-width: 959px) {
+  .footer {
+    padding-top: 36px;
+    padding-bottom: 25px;
+  }
+}
 .footer__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
+}
+@media screen and (max-width: 959px) {
+  .footer__grid {
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 40px 30px;
+  }
 }
 .footer__logo {
   margin-top: -12px;

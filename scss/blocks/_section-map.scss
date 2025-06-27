@@ -5,5 +5,14 @@
   }
 
   &__map {
+    @include mediaTablet {
+      padding: 90px 0;
+    }
+  }
+
+  &__title {
+    @include mediaTablet {
+      margin-bottom: 44px;
+    }
   }
 }
